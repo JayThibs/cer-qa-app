@@ -1,4 +1,4 @@
-cer-esa-qa
+# Canada Energy Regulator Question-Answering App
 ==============================
 
 This is a streamlit app where users can ask natural language questions about the CER ESAs and get back an answer as well as the paragraph where the answer was found.
