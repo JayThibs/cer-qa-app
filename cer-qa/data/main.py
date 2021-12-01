@@ -17,17 +17,17 @@ if __name__ == '__main__':
     freeze_support()
 
     # Update the path when adding a new list of projects
-    Index0_path = os.path.join(os.getcwd(), 'data/raw/index_for_projects/Phase2_Index_of_pdfs_for_Major_Projects_with_ESAs.csv')
+    index_path = os.path.join(os.getcwd(), 'data/raw/index_for_projects/index_of_pdfs_for_major_projects_with_esas.csv')
 
     # Load the list of projects
-    Index0 = pd.read_csv(Index0_path)
+    index = pd.read_csv(index_path)
 
     # Download files
-    count = download_file(os.getcwd(), Index0)
-    print("{} Files were downloaded from {} URL links".format(count, len(Index0)))
+    count = download_file(os.getcwd(), index)
+    print("{} Files were downloaded from {} URL links".format(count, len(index)))
 
     # Rotate files
-    count = rotate_pdf(os.getcwd(), Index0)
+    count = rotate_pdf(os.getcwd(), index)
     print("{} Files were successfully rotated".format(count))
 
     # Convert to pickle files
@@ -47,6 +47,6 @@ if __name__ == '__main__':
         print('That took {} seconds'.format(time.time() - starttime))
 
     # Add metadata and export to csv
-    Index1 = get_pdf_metadata(os.getcwd(), Index0)
-    metadata_file_path = os.path.join(os.getcwd(), 'data/interim/Intermediate_Index_Files/Index 2 - pdfs for Major Projects with ESAs.csv')
-    Index1.to_csv(metadata_file_path, index=False, encoding='utf-8-sig')
+    index_with_metadata = get_pdf_metadata(os.getcwd(), index)
+    metadata_file_path = os.path.join(os.getcwd(), 'data/interim/intermediate_index_files/index_with_metadata.csv')
+    index_with_metadata.to_csv(metadata_file_path, index=False, encoding='utf-8-sig')
