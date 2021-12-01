@@ -1,4 +1,4 @@
-name: berdi
+name: cer-qa
 channels:
   - defaults
 dependencies:
