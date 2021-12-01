@@ -31,11 +31,11 @@ if __name__ == '__main__':
     print("{} Files were successfully rotated".format(count))
 
     # Convert to pickle files
-    for pdf_folder_name, pickle_file_folder_name in {('pdfs', 'pickle_files'), ('rotated_pdfs', 'pickle_files_rotated')}:
+    for pdf_folder_name, pickle_file_folder_name in {('pdfs', 'pickled_pdfs'), ('rotated_pdfs', 'pickle_rotated_pdfs')}:
         pdf_folder_path = os.path.join(os.getcwd(), 'data\\raw', pdf_folder_name)
         pdf_file_paths = [os.path.join(pdf_folder_path, file)
                         for file in os.listdir(pdf_folder_path) if file.endswith('.pdf')]
-        pickle_folder_path = os.path.join(os.getcwd(), 'data\\processed', pickle_file_folder_name)
+        pickle_folder_path = os.path.join(os.getcwd(), 'data\\interim\\', pickle_file_folder_name)
 
         # multiprocessing
         args = [(file, pickle_folder_path) for file in pdf_file_paths]
