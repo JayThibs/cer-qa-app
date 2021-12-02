@@ -6,3 +6,26 @@ dependencies:
   - cudatoolkit=10.1
   - cudnn=7.6
   - pip
+  - pip:
+    - wheel
+    - PyPDF2
+    - tika
+    - python-dotenv
+    - fitz
+    - pandas
+    - beautifulsoup4
+    - nltk
+    - scikit-learn
+    - transformers
+    - tqdm
+    - numpy
+    - ipython
+    - fastapi
+    - streamlit
+    - farm-haystack==0.10.0
+    - grpcio-tools
+    - uvicorn
+    - torch
+    - torchvision
+    - torchaudio
+    - sentence-transformers
