@@ -77,6 +77,9 @@ target/
 
 # exclude data from source control by default
 /data/raw/pdfs/*.pdf
+/data/raw/rotated_pdfs/*.pdf
+/data/interim/pickled_pdfs/*.pkl
+/data/interim/intermediate_index_files/*.csv
 
 # Mac OS-specific storage files
 .DS_Store
