@@ -5,7 +5,7 @@
 PROJECT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 PROFILE = default
 PROJECT_NAME = cer_esa_qa
-PYTHON_INTERPRETER = python3
+PYTHON_INTERPRETER = python
 
 #################################################################################
 # COMMANDS                                                                      #
@@ -29,6 +29,10 @@ conda:
 ## Test python environment is setup correctly
 test_environment:
 	$(PYTHON_INTERPRETER) test_environment.py
+
+download_data:
+	$(PYTHON_INTERPRETER) cer-qa/data/main.py
+
 
 #################################################################################
 # PROJECT RULES                                                                 #
