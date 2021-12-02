@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Apr 17 10:47:06 2020
-Updated on Fri Dec 1 6:57:00 2021
-
-@author: singvibu, JayThibs
-"""
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
 import re
