@@ -26,6 +26,9 @@ conda:
 	conda env update --prune -f environment.yml
 	echo "RUN THE FOLLOWING COMMAND: conda activate cer-qa"
 
+pip:
+	pip install -r requirements.txt
+
 ## Test python environment is setup correctly
 test_environment:
 	$(PYTHON_INTERPRETER) test_environment.py
